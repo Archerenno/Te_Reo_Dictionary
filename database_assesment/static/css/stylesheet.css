@@ -1,0 +1,186 @@
+.navbar-brand{
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.nav_container{
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+}
+
+li a:hover{
+    color: red;
+}
+
+.main_searchbar{
+    text-align: center;
+    /*margin: 20px;*/
+}
+
+input{
+    width: 60%;
+    font-size: 100px;
+}
+
+.word_table{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 1px solid;
+    padding: 1px;
+    margin: 5px;
+    /*width: 100%;*/
+}
+
+.word-box{
+    width: 30%;
+    border: 1px solid;
+    padding: 5px;
+    margin:10px;
+}
+
+.word{
+    font-weight: bold;
+    font-size: Large;
+    text-transform: capitalize;
+    padding: 5px;
+}
+
+img{
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+}
+
+.word_individual{
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.further-info p {
+    margin-bottom: 5px;
+}
+.further-info{
+    padding: 10px;
+
+}
+
+.picture_individual {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+h1{
+    text-align: center;
+    padding: 100px;
+}
+
+* {
+    font-family: 'Manrope', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(236, 240, 241, 1.0);
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+}
+
+h3, h4 {
+    text-align: center;
+    margin: 2rem 0 0.5rem 0;
+}
+
+nav {
+    background-color: rgba(44, 62, 80, 1.0); /* darkest blue */
+    text-align: center;
+    /*color: rgba(52, 152, 219, 1.0);!*light blue*!*/
+    font-size: 1.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.7rem;
+    color: rgba(52, 152, 219, 1.0); /*light blue*/
+}
+
+.navbar-brand {
+    display: inline;
+    float: left;
+    padding: 40px;
+}
+
+nav a {
+    /*margin:0 0.5rem;*/
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+
+    /*border: 1px solid rgba(52, 152, 219, 1.0);*/
+    /*border-radius:0.5rem;*/
+}
+
+a, a:visited {
+    color: rgba(52, 152, 219, 1.0);
+    /*color:hotpink;*/
+    text-decoration: none;
+}
+
+.form-group {
+    padding-top: 3rem;
+}
+
+.form-label {
+    width: 30%;
+    float: left;
+    padding: 0.3rem;
+}
+
+.form-element {
+    width: 70%;
+    float: left;
+    padding: 5px;
+}
+
+.myform {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.category-menu{
+    text-align: center;
+}
+
+a:hover{
+    color: red;
+}
+
+#submit-button{
+    float: right;
+}
+
+p{
+   text-align: center;
+    padding: 10px;
+}
+
+form{
+    text-align: center;
+}
+
+.delete-confirm-choice{
+    text-align: center;
+}
+
+option{
+    
+}

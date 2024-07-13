@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form class="my_login_form" method="POST">
+    <div class="form-group">
+        <div class="form-label">Student or Teacher</div>
+            <div class="form-element"><input type="text" name="usertype" id="usertype" required></div>
+    </div>
+    <div class="form-group">
+        <div class="form-label">First Name</div>
+            <div class="form-element"><input type="text" name="fname" id="fname" maxlength="20" required></div>
+    </div>
+    <div class="form-group">
+        <div class="form-label">Last Name</div>
+            <div class="form-element"><input type="text" name="lname" id="lname" maxlength="30" required></div>
+    </div>
+    <div class="form-group">
+        <div class="form-label">Email</div>
+        <!-- Type email is a new type. This type only allows valid email address formats, for example if you input an
+        email with multiple '@' it will reject it. The addition of maxlength to this form also sets a limit for
+         the amount of characters the user can input into each form element-->
+            <div class="form-element"><input type="email" name="email" id="email" maxlength="100" required></div>
+    </div>
+    <div class="form-group">
+        <div class="form-label">Password</div>
+            <div class="form-element"><input type="password" name="password" id="password" maxlength="30"
+                                             required></div>
+    </div>
+    <div class="form-group">
+        <div class="form-label">Confirm Password</div>
+            <div class="form-element"><input type="password" name="confirm_password" id="confirm_password"
+                                             maxlength="30" required></div>
+    </div>
+    <div class="form-group">
+            <div class="form-label"></div>
+                <div class="form-element"><input type="submit" value="Signup"></div>
+        </div>
+</form>
+{% endblock %}

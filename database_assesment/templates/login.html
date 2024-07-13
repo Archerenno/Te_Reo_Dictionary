@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form class="my_login_form" method="POST">
+    <div class="form-group">
+        <div class="form-label">Email</div>
+            <div class="form-element"><input type="text" name="email" id="email"></div>
+    </div>
+    <div class="form-group">
+        <div class="form-label">Password</div>
+        <!-- Type password is different from type text because when the user inputs any characters into this input
+         these characters are masked (they appear as dots) and this protects the users password privacy-->
+            <div class="form-element"><input type="password" name="password" id="password"></div>
+    </div>
+    <div class="form-group">
+            <div class="form-label"></div>
+                <div class="form-element"><input type="submit" value="Login"></div>
+        </div>
+</form>
+
+<p>If you do not have an account, please sign up <a href="/signup">here</a></p>
+
+{% endblock %}

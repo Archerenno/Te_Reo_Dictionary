@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <div class="category-menu">
+    <h3>Categories</h3>
+        <ul>
+        {% for category in categories %}
+        <li><a href="/words/{{ category[0] }}">{{ category[1] }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="word_table">
+        {% for word in allwords %}
+        <div class="word-box">
+            <div class="word">
+                <a href="/word_page/{{ word[0] }}">{{ word[2] }}</a>
+            </div>
+            <div class="picture">
+                <img src="/static/images/{{ word[6] }}" onerror="this.src='/static/images/noimage.png'">
+            </div>
+            <div class="further-info">
+                <p><strong>English Translation:</strong> {{ word[1] }}</p>
+                <p><strong>Definition:</strong> {{ word[3] }}</p>
+                <p><strong>Category:</strong> {{ category_name }}</p>
+                <p><strong>Level:</strong> {{ word[5] }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

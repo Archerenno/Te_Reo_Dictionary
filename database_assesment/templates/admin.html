@@ -1,0 +1,49 @@
+<!-- extend takes the existing html and formatting of a another html file and applies it as base for another page -->
+{% extends "base.html" %}
+
+<!-- Block body is reference to my base.html which is the page which is extended from, the reference sets the location
+of the below html forms and button to the body (previously defined in bas.html)-->
+{% block body %}
+
+    <!-- Below is a form to add a word, the method is post because the data collected from the form will be sent to
+     (posted) the database. The action is the route that html will take after the submit button is pressed. In this
+     case it takes us to a app route in the app.py-->
+    <h3>Add a word</h3>
+    <form class="myform" method="post" action="/add_word">
+        <div class="form-group">
+            <!-- There are multiple divs in this form so that the label i.e text above the input box, is seperated
+            from the input box and other labels. Type tells us what type of form we are requested therefore one in
+            which the user types an input. id and name are parameters we can use in app.py and css to reference the
+            individual parts of the form. Finally, maxlength sets the maximum characters the user can enter into
+            the input -->
+            <div class="form-label"><label for="english_translation">Word in English:</label></div>
+            <div class="form-element"><input type="text" name="english_translation" id="english_translation"
+                                             maxlength="30" required></div>
+            <div class="form-label"><label for="te_reo_translation">Word in Te Reo:</label></div>
+            <div class="form-element"><input type="text" name="te_reo_translation" id="te_reo_translation"
+                                             maxlength="50" required></div>
+            <div class="form-label"><label for="definition">Definition(English):</label></div>
+            <div class="form-element"><input type="text" name="definition" id="definition"
+                                             maxlength="100" required></div>
+            <div class="form-label"><label for="level">Level:</label></div>
+            <div class="form-element"><input type="text" name="level" id="level" required></div>
+            <div class="form-label"><label for="category">Category:</label></div>
+            <div class="form-element">
+            <!-- Goes through categories (defined as being the list of all category_info) and displays the category
+            name (category_name is the second column and therefore when queried has an index of 2)-->
+                <select id="category" name="category">
+                    {% for category in categories %}
+                        <option value="{{ category[0] }}, {{ category[1] }}">{{ category[1] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-label"></div>
+            <!-- An input tag with a different type; Submit. This is just a submit button which posts the data
+             input in the previous text inputs -->
+            <div class="form-element"><input type="submit" value="Add Word" id="submit-button"></div>
+        </div>
+
+    </form>
+
+{% endblock %}
+

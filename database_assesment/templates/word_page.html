@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+     <div class="word_table_individual">
+     <!-- Goes through every word in allwords (which has been defined as a list of every word and its related
+     information-->
+     {% for word in allwords %}
+        <div class="word-box_individual">
+            <div class="word_individual">
+                <!-- In the following code I use word[X] a lot where X is between 1 and 8. Each number stands for
+                 a field and by taking the index of a single item I can display the words information; definition,
+                 translation and level in their respective areas-->
+                <p>{{ word[2] }}</p>
+            </div>
+            <div class="picture_individual">
+                <!-- On error says that if the requested image from the image can not be found then rather than
+                spitting out an error in the console it uses the 'backup' image which here is no_image.png-->
+                <img src="/static/images/{{ word[6] }}" onerror="this.src='/static/images/noimage.png'">
+            </div>
+            <div class="further-info_individual">
+                <p><strong>English Translation:</strong> {{ word[1] }}</p>
+                <p><strong>Definition:</strong> {{ word[3] }}</p>
+                <p><strong>Category:</strong> {{ word[4] }}</p>
+                <p><strong>Level:</strong> {{ word[5] }}</p>
+                <p><strong>Time Added:</strong> {{ word[7] }}</p>
+                <p><strong>Added By:</strong>Admin{{ word[8] }}</p>
+            </div>
+        </div>
+         {% if student_or_teacher == True %}
+         <div>
+         <!-- The following is a button which is pressed to delete the word. So that my program knows which word I
+          am wanting to delete I have also assigned it a hidden input (hence type = hidden)
+          value of word[0] which is the word_id field from my table words.-->
+         <form method="post" action="/delete_word">
+             <input type="hidden" value="{{ word[0] }}" name="word">
+            <button class = "delete_button" type="submit" name="word_id">
+                Delete Word
+            </button>
+        </form>
+        </div>
+         {% endif %}
+     {% endfor %}
+    </div>
+
+{% endblock %}

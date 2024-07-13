@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+
+<!-- The head of the page. Here it is being used to define the set of characters to be used, assign a title
+ value for the home page (named in the tab area of the window) and states the location of the css page-->
+<head>
+    <meta charset="utf-8">
+    <title>Te Reo Dictionary | Home</title>
+    <link href="/static/css/stylesheet.css" rel="stylesheet">
+</head>
+
+<!-- In this block there is a nav bar with local links (which direct the website to the app routes) for the
+various pages-->
+<body>
+    <nav>
+        <div class="navbar-brand">Te Reo Dictionary</div>
+            <div class="nav_container">
+                <a href="/">Home</a>
+                <a href="/words/1">All Words</a>
+            <!-- The two if statements below check if the user is logged in and if they are a student or teacher.
+             This serves the purpose of preventing those already logged in to try log in again or those logged out to
+             try logout. Alternatively it stops student users from accessing admin and giving them the ability to add
+             words to the dictionary-->
+                {% if logged_in %}
+                <a href="/logout">Logout</a>
+                    {% if student_or_teacher == True %}
+                        <a href="/admin">Admin</a>
+                        {% else %}
+                        {% endif %}
+                {% else %}
+                <a href="/login">Login</a>
+                {% endif %}
+            </div>
+    </nav>
+    <!-- This is where the body block is defined. This is referred to in the other html files-->
+    {% block body %}
+
+    {% endblock %}
+</body>
+</html>
