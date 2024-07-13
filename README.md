@@ -9,8 +9,8 @@ This website has been designed to be used as community created Te Reo Dictionary
 
 - <b>HTML</b> 
 - <b>CSS</b>
-- <b>SQL</b>
-- <b>Flask</b>
+- <b>SQLite</b>
+- <b>Flask (Including Bcrypt)</b>
 - <b>Jinja</b>
 
 <h2>Program walk-through:</h2>
