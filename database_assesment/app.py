@@ -1,5 +1,5 @@
 """
-Archer Simpson
+Archie Simpson
 19/5/23
 Te Reo Dictionary
 """
