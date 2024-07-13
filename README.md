@@ -1,7 +1,7 @@
 <h1>Te Reo Dictionary</h1>
 
 <h2>Description</h2>
-This website has been designed to be used as community created Te Reo Dictionary. In this project there is a profile system, with two types of users, students and teachers. When logged in as a student (or not logged in at all), the user has access to all words but cannot make any changes. However, if the user is logged in under a teacher profile, there is a new admin page accesible by the navigation which can be used to add new words. Furthemore, words can also be removed by teacher users. All users and words in the dictionary are stored in databases and SQL queries are used to access information needed for the programme. Flask's Bcrypt module has been used for some basic encryption of user passwords in the database. Finally Jinja was used for HTML web development when pages shared similiar sections.
+This website has been designed to be used as community created Te Reo Dictionary. In this project there is a profile system, with two types of users, students and teachers. When logged in as a student (or not logged in at all), the user has access to all words but cannot make any changes. However, if the user is logged in under a teacher profile, there is a new admin page accesible by the navigation which can be used to add new words. Furthemore, words can also be removed by teacher users. All users and words in the dictionary are stored in databases and SQL queries are used to access information needed for the programme. Flask's Bcrypt module has been used for some basic encryption of user passwords in the database. Finally Jinja was used for HTML web development to extend the various page templates from the base template.
 <br />
 
 
